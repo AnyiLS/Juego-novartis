@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles9.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada9.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<a href="./index6.html" class="boton-home"></a>
+			<a href="./index8.html" class="boton-atras"></a>
+			<a href="./index10.html" class="boton-next"></a>
+
+			<div class="abrir1" id="abrir1">
+				<img class="menu1" src="./imagenes/nest1.png" alt="" />
+			</div>
+
+			<div class="abrir2" id="abrir2">
+				<img class="menu2" src="./imagenes/nest2.png" alt="" />
+			</div>
+
+			<div class="abrir3" id="abrir3">
+				<img class="menu3" src="./imagenes/next3.png" alt="" />
+			</div>
+
+			<div
+				class="cursor animate__animated animate__pulse animate__infinite">
+				<img src="./imagenes/boton-negro.png" alt="" />
+			</div>
+
+			<div
+				class="cursor1 animate__animated animate__pulse animate__infinite">
+				<img src="imagenes/boton-negro.png" alt="" />
+			</div>
+			<div
+				class="cursor2 animate__animated animate__pulse animate__infinite">
+				<img src="imagenes/boton-negro.png" alt="" />
+			</div>
+
+			<div class="vutom-col"></div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/script9.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide9-1')
+				const slide1 = localStorage.getItem('slide9-2')
+				const slide2 = localStorage.getItem('slide9-3')
+				if (!(slide && slide === 'true')) {
+					localStorage.setItem('slide9-1', 'false')
+				}
+				if (!(slide1 && slide1 === 'true')) {
+					localStorage.setItem('slide9-2', 'false')
+				}
+
+				if (!(slide2 && slide2 === 'true')) {
+					localStorage.setItem('slide9-3', 'false')
+				}
+				if (
+					slide === 'true' &&
+					slide1 === 'true' &&
+					slide2 === 'true'
+				) {
+					$('.vutom-col').hide()
+				}
+			})
+		</script>
+	</body>
+</html>

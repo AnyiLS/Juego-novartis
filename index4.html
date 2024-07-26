@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Juego Pinta el corazón - Novartis intentalo</title>
+
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/styles2.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container" id="intentalo">
+			<img
+				src="./imagenes/intentalo.jpg"
+				alt="Portada"
+				class="cover-image" />
+
+			<div class="corazon">
+				<img src="imagenes/corazon.png" alt="" />
+			</div>
+
+			<div class="heart-container">
+				<div class="parte1" style="display: none">
+					<img src="imagenes/parte1.png" alt="parte uno" />
+				</div>
+
+				<div class="parte2" style="display: none">
+					<img src="imagenes/parte2.png" alt="parte dos" />
+				</div>
+
+				<div class="parte3" style="display: none">
+					<img src="imagenes/parte3.png" alt="parte tres" />
+				</div>
+
+				<div class="parte4" style="display: none">
+					<img src="imagenes/parte4.png" alt="parte cuatro" />
+				</div>
+
+				<div class="parte5" style="display: none">
+					<img src="imagenes/parte5.png" alt="parte cinco" />
+				</div>
+
+				<div class="parte6" style="display: none">
+					<img src="imagenes/parte6.png" alt="parte seis" />
+				</div>
+
+				<div class="parte7" style="display: none">
+					<img src="imagenes/parte7.png" alt="parte siete" />
+				</div>
+
+				<div class="parte8" style="display: none">
+					<img src="imagenes/parte8.png" alt="parte ocho" />
+				</div>
+
+				<div class="parte9" style="display: none">
+					<img src="imagenes/parte9.png" alt="parte nueve" />
+				</div>
+
+				<div class="parte10" style="display: none">
+					<img src="imagenes/parte10.png" alt="parte diez" />
+				</div>
+
+				<div class="parte11" style="display: none">
+					<img src="imagenes/parte11.png" alt="parte once" />
+				</div>
+
+				<div class="parte12" style="display: none">
+					<img src="imagenes/parte12.png" alt="parte soce" />
+				</div>
+
+				<div class="parte13" style="display: none">
+					<img src="imagenes/parte13.png" alt="parte trece" />
+				</div>
+			</div>
+			<span class="quantity" style="top: 39.6%"></span>
+			<div class="intentos">Te <b class="cantidad"></b></div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/scriptfelicidades.js"></script>
+		<script>
+			$(document).ready(() => {
+				console.log($('#intentalo').innerHeight())
+				$('.quantity').css(
+					'font-size',
+					$('#intentalo').innerHeight() / 4.7
+				)
+				$('.intentos').css('font-size', $('#intentalo').innerHeight() / 20)
+				$(window).on('resize', () => {
+					$('.quantity').css(
+						'font-size',
+						$('#intentalo').innerHeight() / 4.7
+					)
+					$('.intentos').css('font-size', $('#intentalo').innerHeight() / 20)
+				})
+			})
+		</script>
+	</body>
+</html>

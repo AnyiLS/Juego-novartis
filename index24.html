@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles24.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada24.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<div id="popup23" class="cerrar-next"></div>
+
+			<!-- video -->
+			<div class="play-boton-10"></div>
+			<video class="reproduc" id="reproduc" controls autoplay muted>
+				<source src="./imagenes/video" type="video/mp4" />
+			</video>
+			<div class="video-2" id="video"></div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/script10.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("#popup23").click(function () {
+					localStorage.setItem('openpopup', 'true')
+					window.location.href = "./index23.html"
+				})
+			})
+		</script>
+	</body>
+</html>

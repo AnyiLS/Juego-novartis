@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles29.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada29.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<a href="./index6.html" class="boton-home"></a>
+			<a href="./index28.html" class="boton-atras"></a>
+			<a href="./index30.html" class="boton-next"></a>
+
+			<div class="openModal"></div>
+			<!-- modal -->
+			<div class="modal" style="display: none; height: 100%">
+				<img src="./imagenes/videopop.webp" class="ancho" id="image" />
+				<div class="closeModal"></div>
+
+				<!-- video -->
+				<div class="play-boton-10"></div>
+				<video class="reproduc" id="reproduc" controls autoplay muted>
+					<source src="https://eml.com.co/entresto/entresto-retornovenoso.mp4" type="video/mp4" />
+				</video>
+				<div class="video-2" id="video"></div>
+
+				<div class="seccion-video2">
+					<img src="./imagenes/posterio.png" alt="">
+				</div>
+	
+				<div class="boton-play2">
+					<img id="play-video" src="./imagenes/boton-play1.png" alt="">
+				</div>
+			</div>
+
+			<!-- video 2 -->
+			<div class="play-boton-11"></div>
+			<video class="reproduc1" id="reproduc1" controls autoplay muted>
+				<source src="https://eml.com.co/entresto/entresto-Valvulas.mp4" type="video/mp4" />
+			</video>
+			<div class="video-3" id="video1"></div>
+
+			
+			<div class="cursor1 circle animate__animated animate__pulse animate__infinite">
+				<img id="play-video" src="./imagenes/boton-azul.png" alt="">
+			</div>
+
+			<div class="vutom-col"></div>
+
+			<div class="seccion-video1">
+				<img src="./imagenes/pulmonar.png" alt="">
+			</div>
+
+			<div class="boton-play circle cursor animate__animated animate__pulse animate__infinite">
+				<img id="play-video" src="./imagenes/boton-play.png" alt="">
+			</div>
+
+			<div class="boton-play1 ">
+				<img id="play-video" src="./imagenes/boton-play.png" alt="">
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/script29.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide29-1')
+				const slide1 = localStorage.getItem('slide29-2')
+				if (slide && slide === 'true') {
+					$('.cursor').hide()
+				} else {
+					localStorage.setItem('slide29-1', 'false')
+				}
+				if (slide1 && slide1 === 'true') {
+					$('.cursor').hide()
+				} else {
+					localStorage.setItem('slide29-2', 'false')
+				}
+				if (slide === 'true' && slide1 === 'true') {
+					$('.cursor').hide()
+					$('.cursor1').hide()
+					$('.vutom-col').hide()
+				}
+			})
+		</script>
+	</body>
+</html>

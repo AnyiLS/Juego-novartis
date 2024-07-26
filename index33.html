@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles33.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada33.webp"
+				alt="Portada"
+				class="cover-image" />
+
+
+			<a href="./index23.html" class="ceg-next"></a>
+
+			<div class="openModal"></div>
+			<!-- modal -->
+			<div class="modal" style="display: none; height: 100%">
+				<img src="./imagenes/portada25.webp" class="ancho" id="image" />
+				<div class="closeModal"></div>
+
+				<!-- video -->
+				<div class="play-boton-10"></div>
+				<video class="reproduc" id="reproduc" controls autoplay muted>
+					<source src="https://eml.com.co/entresto/entresto-pulmonar.mp4" type="video/mp4" />
+				</video>
+				<div class="video-2" id="video"></div>
+
+				<div class="seccion-video1">
+					<img src="./imagenes/circulacion.png" alt="">
+				</div>
+	
+				<div class="boton-play">
+					<img id="play-video" src="./imagenes/boton-play1.png" alt="">
+				</div>
+			</div>
+
+			<div class="openModal1"></div>
+			<!-- modal -->
+			<div class="modal1" style="display: none; height: 100%">
+				<img src="./imagenes/portada24.webp" class="ancho" id="image" />
+				<div class="closeModal1"></div>
+
+				<!-- video -->
+				<div class="play-boton-11"></div>
+				<video class="reproduc1" id="reproduc1" controls autoplay muted>
+					<source src="https://eml.com.co/entresto/entresto-circulacionS.mp4" type="video/mp4" />
+				</video>
+				<div class="video-3" id="video"></div>
+
+				<div class="seccion-video2">
+					<img src="./imagenes/sistena.png" alt="">
+				</div>
+	
+				<div class="boton-play2">
+					<img id="play-video" src="./imagenes/boton-play1.png" alt="">
+				</div>
+			</div>
+
+			<div class="cursor circle animate__animated animate__pulse animate__infinite">
+				<img
+					src="./imagenes/boton-azul.png"
+					alt="" />
+			</div>
+
+			<div class="cursor1 circle animate__animated animate__pulse animate__infinite">
+				<img
+					src="./imagenes/boton-azul.png"
+					alt="" />
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/script33.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide33-1')
+				const slide1 = localStorage.getItem('slide33-2')
+				if (slide && slide === 'true') {
+					$('.cursor').hide()
+					
+				}
+				if(slide1 && slide1 === 'true') {
+					$('.cursor1').hide()
+				}
+			})
+		</script>
+	</body>
+</html>

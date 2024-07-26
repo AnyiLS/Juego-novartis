@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles23.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada23.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<a href="./index6.html" class="boton-home"></a>
+			<a href="./index22.html" class="boton-atras"></a>
+			<a href="./index26.html" class="boton-next"></a>
+
+			<a href="./index33.html" class="boton1"></a>
+
+			<div class="cursor circle animate__animated animate__pulse animate__infinite">
+				<img id="play-video" src="./imagenes/boton-azul.png" alt="">
+			</div>
+			<div class="vutom-col"></div>
+		</div>
+
+		<!-- Scripts -->    
+		<script src="./js/script23.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide33-1')
+				const slide1 = localStorage.getItem('slide33-2')
+				if (slide && slide === 'true' && slide1 && slide1 === 'true') {
+					$('.boton-next').show()
+					$('.cursor').hide()
+					$('.vutom-col').hide()
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles15.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada15.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<a href="./index6.html" class="boton-home"></a>
+			<a href="./index14.html" class="boton-atras"></a>
+			<a href="./index16.html" class="boton-next"></a>
+
+			<div class="openModal"></div>
+			<!-- modal -->
+			<div class="modal" style="display: none; height: 100%">
+				<img src="./imagenes/derecho.webp" class="ancho" id="image" />
+				<div class="closeModal"></div>
+			</div>
+
+			<div class="openModal1"></div>
+			<!-- modal -->
+			<div class="modal1" style="display: none; height: 100%">
+				<img src="./imagenes/izquierdo.webp" class="ancho" id="image" />
+				<div class="closeModal1"></div>
+			</div>
+
+			<!-- video -->
+			<div class="play-boton-10"></div>
+			<video class="reproduc" id="reproduc" controls autoplay muted>
+				<source
+					src="https://eml.com.co/entresto/entresto-corazonIz.mp4"
+					type="video/mp4" />
+			</video>
+			<div class="video-2" id="video"></div>
+
+			<div class="seccion-video1">
+				<img src="./imagenes/sesion1.png" alt="" />
+			</div>
+
+			<div class="boton-play">
+				<img id="play-video" src="./imagenes/boton-play1.png" alt="" />
+			</div>
+
+			<div
+				class="cursor circle animate__animated animate__pulse animate__infinite">
+				<img src="./imagenes/boton-play1.png" alt="" />
+			</div>
+			<div
+				class="cursor1 circle animate__animated animate__pulse animate__infinite">
+				<img src="./imagenes/boton-mas.png" alt="" />
+			</div>
+			<div
+				class="cursor2 circle animate__animated animate__pulse animate__infinite">
+				<img src="./imagenes/boton-mas.png" alt="" />
+			</div>
+
+			<div class="vutom-col"></div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/script15.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide15-1')
+				const slide1 = localStorage.getItem('slide15-2')
+				const slide2 = localStorage.getItem('slide15-3')
+				if (slide && slide === 'true') {
+					$('.cursor').hide()
+				} else {
+					localStorage.setItem('slide15-1', 'false')
+				}
+				if (slide1 && slide1 === 'true') {
+					$('.cursor1').hide()
+				} else {
+					localStorage.setItem('slide15-2', 'false')
+				}
+				if (slide2 && slide2 === 'true') {
+					$('.cursor2').hide()
+				} else {
+					localStorage.setItem('slide15-3', 'false')
+				}
+				if (
+					slide === 'true' &&
+					slide1 === 'true' &&
+					slide2 === 'true'
+				) {
+					$('.cursor').hide()
+					$('.cursor1').hide()
+					$('.cursor2').hide()
+					$('.vutom-col').hide()
+				}
+			})
+		</script>
+	</body>
+</html>

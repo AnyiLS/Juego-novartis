@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles17.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada17.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<a href="./index6.html" class="boton-home"></a>
+			<a href="./index16.html" class="boton-atras"></a>
+			<a href="./index18.html" class="boton-next"></a>
+
+			<div class="abrir1" id="abrir1">
+				<img class="menu1" src="./imagenes/capaz.png" alt="" />
+			</div>
+
+			<div class="abrir2" id="abrir2">
+				<img class="menu2" src="./imagenes/bordes.png" alt="" />
+			</div>
+
+			<div class="cursor circle animate__animated animate__pulse animate__infinite">
+				<img src="./imagenes/boton-mas.png" alt="">
+			</div>
+			<div class="cursor1 circle animate__animated animate__pulse animate__infinite">
+				<img src="./imagenes/boton-mas.png" alt="">
+			</div>
+			<div class="vutom-col"></div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/script17.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide17-1')
+				const slide1 = localStorage.getItem('slide17-2')
+				if (slide && slide === 'true') {
+					$('.cursor').hide()
+				} else {
+					localStorage.setItem('slide17-1', 'false')
+				}
+				if (slide1 && slide1 === 'true') {
+					$('.cursor').hide()
+				} else {
+					localStorage.setItem('slide17-2', 'false')
+				}
+				if (slide === 'true' && slide1 === 'true') {
+					$('.cursor').hide()
+					$('.cursor1').hide()
+					$('.vutom-col').hide()
+				}
+			})
+		</script>
+	</body>
+</html>

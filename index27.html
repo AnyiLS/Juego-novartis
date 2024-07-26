@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles27.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada27.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<a href="./index6.html" class="boton-home"></a>
+			<a href="./index26.html" class="boton-atras"></a>
+			<a href="./index28.html" class="boton-next"></a>
+
+			<div class="openModal"></div>
+			<!-- modal -->
+			<div class="modal" style="display: none; height: 100%">
+				<img src="./imagenes/pop13.webp" class="ancho" id="image" />
+				<div class="closeModal"></div>
+			</div>
+			<div class="cursor circle animate__animated animate__pulse animate__infinite">
+				<img id="play-video" src="./imagenes/botn-rosa.png" alt="">
+			</div>
+			<div class="vutom-col"></div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/script27.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide27')
+				if (slide && slide === 'true') {
+					$('.boton-next').show()
+					$('.cursor').hide()
+					$('.vutom-col').hide()
+				} else {
+					$('.boton-next').hide()
+				}
+			})
+		</script>
+		
+	</body>
+</html>

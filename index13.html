@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles13.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada13.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<a href="./index6.html" class="boton-home"></a>
+			<a href="./index12.html" class="boton-atras"></a>
+			<a href="./index14.html" class="boton-next"></a>
+
+			<div class="openModal"></div>
+			<!-- modal -->
+			<div class="modal" style="display: none; height: 100%">
+				<img src="./imagenes/popu1.webp" class="ancho" id="image" />
+				<div class="closeModal"></div>
+			</div>
+
+			<div class="cursor circle animate__animated animate__pulse animate__infinite">
+				<img src="./imagenes/boton-azul.png" alt="">
+			</div>
+			<div class="vutom-col"></div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/scritp13.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide13')
+				if (slide && slide === 'true') {
+					$('.boton-next').show()
+					$('.cursor').hide()
+					$('.vutom-col').hide()
+				} else {
+					localStorage.setItem('slide13', 'false')
+					$('.boton-next').hide()
+					$('.vutom-col').show()
+				}
+			})
+		</script>
+	</body>
+</html>

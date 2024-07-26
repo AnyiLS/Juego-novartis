@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Estructura Módulo 1 Entresto</title>
+
+		<link rel="stylesheet" href="./css/styles10.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<!-- Scripts -->
+		<script src="./js/jquery-3.2.1.min.js"></script>
+		<script src="./js/functions.js"></script>
+	</head>
+	<body class="ancho">
+		<div class="container">
+			<img
+				src="./imagenes/portada10.webp"
+				alt="Portada"
+				class="cover-image" />
+
+			<a href="./index6.html" class="boton-home"></a>
+			<a href="./index9.html" class="boton-atras"></a>
+			<a href="./index11.html" class="boton-next"></a>
+
+			<!-- modal -->
+			<div class="openModal"></div>
+			<div class="modal" style="display: none; height: 100%">
+				<img src="./imagenes/ubicacion.webp" class="ancho" id="image" />
+				<div class="closeModal"></div>
+
+				<!-- video -->
+				<div class="play-boton-11"></div>
+				<video class="reproduc1" id="reproduc1" controls autoplay muted>
+					<source src="https://eml.com.co/entresto/pop-video.MP4" type="video/mp4" />
+				</video>
+				<div class="video-3" id="video"></div>
+
+				<div class="circulo-image">
+					<img
+						src="./imagenes/cirlo.png"
+						alt="" />
+				</div>
+
+				<div class="boton-play1">
+					<img src="./imagenes/boton-play1.png" alt="">
+				</div>
+			</div>
+			<!-- modal -->
+
+			<!-- modal -->
+			<div class="openModal1"></div>
+			<div class="modal1" style="display: none; height: 100%">
+				<img src="./imagenes/capaz.webp" class="ancho" id="image" />
+				<div class="closeModal1"></div>
+
+				<!-- video -->
+				<div class="play-boton-10"></div>
+				<video class="reproduc" id="reproduc" controls autoplay muted>
+					<source src="https://eml.com.co/entresto/entresto-capas.mp4" type="video/mp4" />
+				</video>
+				<div class="video-2" id="video"></div>
+
+				<div class="seccion-video1">
+					<img src="./imagenes/capas.png" alt="">
+				</div>
+	
+				<div class="boton-play">
+					<img src="./imagenes/boton-play1.png" alt="">
+				</div>
+			</div>
+			<!-- modal -->
+
+			<div class="cursor circle animate__animated animate__pulse animate__infinite">
+				<img
+					src="./imagenes/boton-mas.png"
+					alt="" />
+			</div>
+			<div class="cursor1 circle animate__animated animate__pulse animate__infinite">
+				<img
+					src="./imagenes/boton-mas.png"
+					alt="" />
+			</div>
+			<div class="vutom-col"></div>
+
+			
+		</div>
+
+		<!-- Scripts -->
+		<script src="./js/script10.js"></script>
+		<script>
+			$(document).ready(function () {
+				const slide = localStorage.getItem('slide10-1')
+				const slide1 = localStorage.getItem('slide10-2')
+				if (slide && slide === 'true') {
+					$('.cursor').hide()
+				} else {
+					localStorage.setItem('slide10-1', 'false')
+				}
+				if (slide1 && slide1 === 'true') {
+					$('.cursor').hide()
+				} else {
+					localStorage.setItem('slide10-2', 'false')
+				}
+				if (slide === 'true' && slide1 === 'true') {
+					$('.cursor').hide()
+					$('.cursor1').hide()
+					$('.vutom-col').hide()
+				}
+			})
+		</script>
+	</body>
+</html>

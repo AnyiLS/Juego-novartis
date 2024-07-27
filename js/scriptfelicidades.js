@@ -20,7 +20,7 @@ $(document).ready(() => {
 					'puedeJugar',
 					JSON.stringify(nuevaFecha)
 				)
-				window.location.href = './index6.html'
+				window.location.href = './index.html'
 			} else {
 				localStorage.setItem('intentos', intentos - 1)
 				window.location.href = './index.html'

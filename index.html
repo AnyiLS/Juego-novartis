@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Juego Pinta el corazón - Novartis</title>
+		<title>Estructura Módulo 1 Entresto</title>
 
-		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/styles6.css" />
 		<!-- Scripts -->
 		<script src="./js/jquery-3.2.1.min.js"></script>
 		<script src="./js/functions.js"></script>
@@ -13,50 +13,14 @@
 	<body class="ancho">
 		<div class="container">
 			<img
-				src="./imagenes/portada.webp"
+				src="./imagenes/portada6.webp"
 				alt="Portada"
 				class="cover-image" />
 
-				<div class="boton-next">
-					<img src="imagenes/boton-next.png" alt="">
-				</div>
+			<a href="./index34.html" class="boton-next"></a>
 		</div>
 
 		<!-- Scripts -->
-
 		<script src="./js/scripts.js"></script>
-		<script>
-			let intentos = JSON.parse(localStorage.getItem('intentos'))
-			let puedeJugar = localStorage.getItem('puedeJugar')
-
-			const fecha = new Date()
-			fecha.setHours(fecha.getHours() - 7)
-
-			if (!puedeJugar) {
-				document
-					.querySelector('.container')
-					.addEventListener('click', () => {
-						window.location.href = './index1.html'
-					})
-
-				if (!intentos) {
-					window.localStorage.setItem('intentos', JSON.stringify(3))
-				}
-			}
-
-			if (new Date() >= nuevaFecha.getDate() + 1) {
-				document
-					.querySelector('.boton-next')
-					.addEventListener('click', () => {
-						window.location.href = './index1.html'
-					})
-
-				if (!intentos) {
-					window.localStorage.setItem('intentos', JSON.stringify(3))
-				}
-			}
-
-			
-		</script>
 	</body>
 </html>

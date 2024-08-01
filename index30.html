@@ -24,5 +24,17 @@
 
 		<!-- Scripts -->
 		<script src="./js/script10.js"></script>
+		<script>
+			// SCORM
+
+			if (API) {
+				getName()
+				setLocation('index-1.html')
+
+				if (getStatus() != 'completed') {
+					setStatus('incomplete')
+				}
+			}
+		</script>
 	</body>
 </html>

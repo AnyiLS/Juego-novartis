@@ -89,13 +89,19 @@
 					'font-size',
 					$('#intentalo').innerHeight() / 4.7
 				)
-				$('.intentos').css('font-size', $('#intentalo').innerHeight() / 20)
+				$('.intentos').css(
+					'font-size',
+					$('#intentalo').innerHeight() / 20
+				)
 				$(window).on('resize', () => {
 					$('.quantity').css(
 						'font-size',
 						$('#intentalo').innerHeight() / 4.7
 					)
-					$('.intentos').css('font-size', $('#intentalo').innerHeight() / 20)
+					$('.intentos').css(
+						'font-size',
+						$('#intentalo').innerHeight() / 20
+					)
 				})
 			})
 		</script>

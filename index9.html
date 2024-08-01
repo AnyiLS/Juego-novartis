@@ -37,16 +37,16 @@
 			</div>
 
 			<div
-				class="cursor animate__animated animate__pulse animate__infinite">
-				<img src="./imagenes/boton-negro.png" alt="" />
+				class="cursor circle animate__animated animate__pulse animate__infinite">
+				<img src="./imagenes/boton-negro.png" alt=""  />
 			</div>
 
 			<div
-				class="cursor1 animate__animated animate__pulse animate__infinite">
+				class="cursor1 circle animate__animated animate__pulse animate__infinite">
 				<img src="imagenes/boton-negro.png" alt="" />
 			</div>
 			<div
-				class="cursor2 animate__animated animate__pulse animate__infinite">
+				class="cursor2 circle animate__animated animate__pulse animate__infinite">
 				<img src="imagenes/boton-negro.png" alt="" />
 			</div>
 
@@ -76,6 +76,9 @@
 					slide2 === 'true'
 				) {
 					$('.vutom-col').hide()
+					$('.cursor').css('box-shadow', 'none')
+					$('.cursor1').css('box-shadow', 'none')
+					$('.cursor2').css('box-shadow', 'none')
 				}
 			})
 		</script>

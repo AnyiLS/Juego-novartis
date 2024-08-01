@@ -4,6 +4,7 @@ $(document).ready(function () {
 	let bandera2 = false
 	$('#abrir1').on('click', function () {
 		localStorage.setItem('slide9-1', 'true')
+		$('.cursor').css('box-shadow', 'none');
 		if (localStorage.getItem('slide9-2') === 'true' && localStorage.getItem('slide9-3') === 'true') {
 			$('.boton-next').show()
 			$('.vutom-col').hide()
@@ -21,6 +22,7 @@ $(document).ready(function () {
 
     $('#abrir2').on('click', function () {
 		localStorage.setItem('slide9-2', 'true')
+		$('.cursor1').css('box-shadow', 'none');
 		if (localStorage.getItem('slide9-1') === 'true'  && localStorage.getItem('slide9-3') === 'true') {
 			$('.boton-next').show()
 			$('.vutom-col').hide()
@@ -36,6 +38,7 @@ $(document).ready(function () {
 
     $('#abrir3').on('click', function () {
 		localStorage.setItem('slide9-3', 'true')
+		$('.cursor2').css('box-shadow', 'none');
 		if (localStorage.getItem('slide9-1') === 'true'  && localStorage.getItem('slide9-2') === 'true') {
 			$('.boton-next').show()
 			$('.vutom-col').hide()
